@@ -17,6 +17,7 @@ namespace VideoStore.ECommerce
             var configuration = new BusConfiguration();
             configuration.PurgeOnStartup(true);
             configuration.RijndaelEncryptionService();
+            configuration.UseTransport<SqlServerTransport>();
 
             // Use NHibernate Persistence
             configuration.UsePersistence<NHibernatePersistence>();

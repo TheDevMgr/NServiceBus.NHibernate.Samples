@@ -3,7 +3,7 @@ namespace VideoStore.Sales
     using NServiceBus;
     using NServiceBus.Persistence;
 
-    public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, UsingTransport<MsmqTransport>
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, UsingTransport<SqlServerTransport>
     {
         public void Customize(BusConfiguration configuration)
         {
